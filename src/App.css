@@ -24,6 +24,25 @@
   letter-spacing: -0.02em;
 }
 
+.test-button {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #2563eb;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.test-button:hover {
+  background: #dbeafe;
+  border-color: #93c5fd;
+}
+
 .todo-form {
   display: flex;
   gap: 0.5rem;
