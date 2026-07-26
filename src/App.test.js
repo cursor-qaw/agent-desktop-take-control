@@ -7,6 +7,18 @@ test('renders to-do heading', () => {
   expect(screen.getByRole('heading', { name: /to-do/i })).toBeInTheDocument();
 });
 
+test('logs Godfather quote when Test button is clicked', async () => {
+  const logSpy = jest.spyOn(console, 'log').mockImplementation(() => {});
+  render(<App />);
+
+  await userEvent.click(screen.getByRole('button', { name: /^test$/i }));
+
+  expect(logSpy).toHaveBeenCalledWith(
+    "I'm gonna make him an offer he can't refuse"
+  );
+  logSpy.mockRestore();
+});
+
 test('adds a task and shows it in the list', async () => {
   render(<App />);
 
