@@ -120,6 +120,24 @@
   background: #fef2f2;
 }
 
+.test-button {
+  display: block;
+  width: 100%;
+  margin-top: 1.25rem;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1e293b;
+  background: #e2e8f0;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.test-button:hover {
+  background: #cbd5e1;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
