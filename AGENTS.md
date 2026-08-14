@@ -18,3 +18,4 @@ This repository is a single client-side **Create React App** (CRA, `react-script
 - Dependencies are installed with `npm ci` (a `package-lock.json` is committed). This is the update-script step and does not need to be repeated manually.
 - The app has no persistence: todos reset on page refresh. This is expected behavior, not a bug.
 - `npm test` without `CI=true` blocks in interactive watch mode; always use `CI=true npm test` in an automated/agent context.
+- Do NOT run `npm ci` while the dev server (`npm start`) is running. `npm ci` wipes `node_modules` first and then fails with `ENOTEMPTY` on `node_modules/.cache/babel-loader` (held open by the running dev server), leaving `node_modules` corrupted (e.g. `react-scripts: not found`). Stop the dev server first, then run `npm ci`. The startup update script (`npm ci`) is safe because it runs before any service starts.
