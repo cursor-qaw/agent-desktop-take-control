@@ -48,6 +48,16 @@ function App() {
           </button>
         </form>
 
+        <button
+          type="button"
+          className="test-button"
+          onClick={() =>
+            console.log("I'm gonna make him an offer he can't refuse")
+          }
+        >
+          Test
+        </button>
+
         {todos.length === 0 ? (
           <p className="todo-empty">No tasks yet. Add one above.</p>
         ) : (
