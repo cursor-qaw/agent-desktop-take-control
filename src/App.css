@@ -60,6 +60,24 @@
   background: #1d4ed8;
 }
 
+.todo-test {
+  display: block;
+  width: 100%;
+  margin-bottom: 1.25rem;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1e293b;
+  background: #e2e8f0;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.todo-test:hover {
+  background: #cbd5e1;
+}
+
 .todo-empty {
   margin: 0;
   color: #64748b;
