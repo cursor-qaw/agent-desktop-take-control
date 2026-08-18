@@ -6,6 +6,7 @@ let nextId = 1;
 function App() {
   const [todos, setTodos] = useState([]);
   const [draft, setDraft] = useState('');
+  const testButtonMessage = "I'm gonna make him an offer he can't refuse";
 
   function addTodo(e) {
     e.preventDefault();
@@ -23,6 +24,10 @@ function App() {
 
   function removeTodo(id) {
     setTodos((prev) => prev.filter((t) => t.id !== id));
+  }
+
+  function handleTestButtonClick() {
+    console.log(testButtonMessage);
   }
 
   return (
@@ -47,6 +52,14 @@ function App() {
             Add
           </button>
         </form>
+
+        <button
+          type="button"
+          className="todo-test-button"
+          onClick={handleTestButtonClick}
+        >
+          Test Button
+        </button>
 
         {todos.length === 0 ? (
           <p className="todo-empty">No tasks yet. Add one above.</p>
