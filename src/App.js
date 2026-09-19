@@ -30,6 +30,16 @@ function App() {
       <main className="todo-panel">
         <h1 className="todo-title">To-do</h1>
 
+        <button
+          type="button"
+          className="test-button"
+          onClick={() =>
+            console.log("I'm gonna make him an offer he can't refuse")
+          }
+        >
+          Test
+        </button>
+
         <form className="todo-form" onSubmit={addTodo}>
           <label htmlFor="new-todo" className="visually-hidden">
             New task
