@@ -131,3 +131,20 @@
   white-space: nowrap;
   border: 0;
 }
+
+.test-button {
+  margin-top: 1.25rem;
+  width: 100%;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  background: #e8ecf1;
+  border: 1px solid #d0d4dc;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.test-button:hover {
+  background: #dce2ea;
+}
